@@ -32,14 +32,14 @@ def pomodoro():
             for y in range(7):
                 unicorn.set_pixel(x, y, colors[phase][0],colors[phase][1],colors[phase][2])
                 
-        while row > -1:
-            while column > -1:
+        while column > -1:
+            while row > -1:
                 wait(cycles[phase])
                 unicorn.set_pixel(column, row, 0, 0, 0)
-                column -= 1
-            column = 15
-            row -= 1
-        row = 6
+                row -= 1
+            row = 6
+            column -= 1
+        column = 15
          
         phase = not phase
         
